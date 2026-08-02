@@ -24,9 +24,9 @@ pipeline {
 
         stage('Run New Container') {
             steps {
-                sh 'docker run -d -p 8081:80 --name ai-cicd-container ai-cicd-app'
-            }
-        }
+                sh 'docker run -d --restart unless-stopped -p 8081:80 --name ai-cicd-container ai-cicd-app'
+    }
+}
     }
 
     post {
