@@ -1,87 +1,106 @@
-# 🚀 AI-Powered CI/CD Pipeline
+# 🚀 AI Powered CI/CD Pipeline
 
 ## 📌 Project Overview
-This project demonstrates a complete AI-powered CI/CD pipeline using Jenkins, Docker, Prometheus, Grafana, and Node Exporter.
 
-The pipeline automatically builds, deploys, monitors, and sends email alerts for the application.
+This project demonstrates an end-to-end AI Powered CI/CD Pipeline using Jenkins, Docker, Prometheus, Grafana, and Node Exporter.
+
+The pipeline automatically builds, deploys, monitors the application, and sends email alerts when system metrics exceed the configured threshold.
 
 ---
 
-## 🛠️ Tech Stack
+# 🏗 Architecture
 
-- Git & GitHub
+See the architecture diagram below.
+
+![Architecture](docs/screenshots/architecture-diagram.png)
+
+---
+
+# ✨ Features
+
+- Automated Jenkins CI/CD Pipeline
+- Docker Image Build
+- Docker Container Deployment
+- Docker Compose Monitoring Stack
+- Prometheus Metrics Collection
+- Node Exporter System Monitoring
+- Grafana Dashboards
+- Email Alerts using SMTP
+- GitHub Integration
+
+---
+
+# 🛠 Tech Stack
+
+- GitHub
 - Jenkins
 - Docker
 - Docker Compose
-- Nginx
 - Prometheus
 - Grafana
 - Node Exporter
+- Nginx
 
 ---
 
-## 📂 Project Structure
+# 📸 Screenshots
 
-```
-AI-Powered-CICD/
-│
-├── app/
-├── docker/
-├── docs/
-├── jenkins/
-├── monitoring/
-├── scripts/
-├── terraform/
-└── README.md
-```
+## Jenkins Pipeline
 
----
+![Jenkins](docs/screenshots/jenkins-success.png)
 
-## ⚙️ CI/CD Workflow
+## Prometheus Targets
 
-1. Developer pushes code to GitHub.
-2. Jenkins automatically triggers the pipeline.
-3. Docker image is built.
-4. AI Web Application is deployed.
-5. Docker Compose starts:
-   - Prometheus
-   - Grafana
-   - Node Exporter
-6. Prometheus collects metrics.
-7. Grafana visualizes metrics.
-8. Email alerts are sent through SMTP.
+![Prometheus](docs/screenshots/prometheus-targets.png)
+
+## Grafana Dashboard
+
+![Grafana](docs/screenshots/grafana-dashboard.png)
+
+## Email Alert
+
+![Email Alert](docs/screenshots/email-alert.png)
 
 ---
 
-## 📊 Monitoring
+# 🚀 Deployment Flow
 
-- Prometheus Metrics
-- Grafana Dashboard
-- Node Exporter
-- Email Alerts
+Developer
+
+↓
+
+GitHub
+
+↓
+
+Jenkins Pipeline
+
+↓
+
+Docker Build
+
+↓
+
+Application Deployment
+
+↓
+
+Docker Compose
+
+↓
+
+Prometheus + Node Exporter
+
+↓
+
+Grafana Dashboard
+
+↓
+
+Email Alerts
 
 ---
 
-## 🏗️ Architecture Diagram
-
-See:
-
-```
-docs/architecture-diagram
-```
-
----
-
-## 📷 Screenshots
-
-- Jenkins Pipeline Success
-- Grafana Dashboard
-- Prometheus Targets
-- Email Alert
-- Architecture Diagram
-
----
-
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 Hariharan
