@@ -1,0 +1,30 @@
+Developer
+                    │
+             git push (GitHub)
+                    │
+                    ▼
+               GitHub Repository
+                    │
+                    ▼
+                 Jenkins
+                    │
+        ┌───────────┴───────────┐
+        │                       │
+        ▼                       ▼
+ Docker Build             Docker Compose
+        │                       │
+        ▼                       ▼
+ AI Web Container      Prometheus + Grafana + Node Exporter
+        │                       │
+        └───────────┬───────────┘
+                    │
+                    ▼
+              Prometheus
+                    │
+                    ▼
+                Grafana
+                    │
+         Dashboard + Email Alerts
+                    │
+                    ▼
+                  Admin
