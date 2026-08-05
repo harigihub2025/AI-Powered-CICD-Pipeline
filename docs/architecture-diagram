@@ -1,30 +1,23 @@
 Developer
-                    │
-             git push (GitHub)
-                    │
-                    ▼
-               GitHub Repository
-                    │
-                    ▼
-                 Jenkins
-                    │
-        ┌───────────┴───────────┐
-        │                       │
-        ▼                       ▼
- Docker Build             Docker Compose
-        │                       │
-        ▼                       ▼
- AI Web Container      Prometheus + Grafana + Node Exporter
-        │                       │
-        └───────────┬───────────┘
-                    │
-                    ▼
-              Prometheus
-                    │
-                    ▼
-                Grafana
-                    │
-         Dashboard + Email Alerts
-                    │
-                    ▼
-                  Admin
+                            │
+                    git push (GitHub)
+                            │
+                   GitHub Repository
+                            │
+                 Jenkins CI/CD Pipeline
+                            │
+          ┌─────────────────┴─────────────────┐
+          │                                   │
+     Docker Build                      Docker Compose
+          │                                   │
+   AI Web Container         ┌─────────────────────────┐
+                            │                         │
+                      Prometheus              Node Exporter
+                            ▲                         │
+                            └──────── Scrape Metrics ─┘
+                                      │
+                                  Grafana
+                                      │
+                     Dashboards + Email Alerts (SMTP)
+                                      │
+                                    Admin
